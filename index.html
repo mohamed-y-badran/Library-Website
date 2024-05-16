@@ -1,0 +1,826 @@
+<!-- Index
+1-Head
+2-Body
+    2.1-Header
+    2.2-Main (carousel)
+    2.3-Section (Welcome)
+    2.4-Section (Floating Icons)
+    2.5-Section (ACCORDION)
+    2.6-Section (Booking)
+    2.7-Section (Featured Books )
+    2.8-Section (Events Calendar )
+    2.9-Section (Online Resources )
+    2.10-Section (Photos)
+    2.11-Section (Persona Cards)
+    2.12-Section (News)
+    2.13-Section (Social Media Cards) 
+    2.14-Footer
+    2.15-Modal
+    2.16-JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 9</title>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">  -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css" rel="stylesheet" integrity="sha256-V6lu+OdYNKTKTsVFBuQsyIlDiRWiOmtC8VQ8Lzdm2i4=" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="Css/all.css">
+        <link rel="stylesheet" href="Css/Bootstrap Icon/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="Css/fastbootstrap.min.css">
+        <link rel="stylesheet" href="Css/bootstrap.css">
+        <link rel="stylesheet" href="Css/style.css">
+    </head>
+
+    <body class="bg-light-subtle">
+
+        <Header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-0	">
+                <div class="container-fluid">
+                    <img class="headimg me-3" src="Images/log.png" alt="lib">
+                    <a class="navbar-brand border-end pe-2 fw-bolder Head" href="#">Shelf Space</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse fw-bold " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle border border-1 rounded-1 border-info" href="#" role="button" data-bs-toggle="dropdown">
+                                    Catalog
+                                </a>
+                                <ul class="dropdown-menu bg-body-tertiary">
+                                    <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                                    <li><a class="dropdown-item" href="#">Bests Sellers</a></li>
+                                    <li><a class="dropdown-item" href="#">Staff Picks</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">History</a></li>
+                                    <li><a class="dropdown-item" href="#">Fiction</a></li>
+                                    <li><a class="dropdown-item" href="#">Culture</a></li>
+                                    <li><a class="dropdown-item" href="#">Economics</a></li>
+                                </ul>
+                            </li> 
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Locations</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Support</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-white btn-outline-info me-2" type="submit">Search</button>
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#Login-Modal">
+                                Login
+                              </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </Header>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->        
+        <main> <!--carousel  -->
+            <div id="carouselExampleCaptions" class="carousel slide vh-100">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div> <!-- carousel-indicators -->
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active vh-100">
+                        <Div class="position-absolute w-100 h-100 bg-dark  bg-opacity-25"></Div>
+                        <img src="Images/Library.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Library">
+                        <div class="carousel-caption bg-info bg-opacity-25">
+                            <h5>Endless Possibilities</h5>
+                            <p>Discover Your Next Adventure.</p>
+                            <button class="btn btn-primary" type="button">Browse Books</button>
+                        </div>
+                    </div> <!-- first carousel-item -->
+
+                    <div class="carousel-item vh-100">
+                        <Div class="position-absolute w-100 h-100 bg-dark  bg-opacity-25"></Div>
+                        <img src="Images/future3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Read.">
+                        <div class="carousel-caption bg-info bg-opacity-25">
+                            <h5>Explore Tomorrow</h5>
+                            <p>Imagine Futures Unseen</p>
+                            <button class="btn btn-primary" type="button">Future Resources</button>
+                        </div>
+                    </div> <!-- Second carousel-item -->
+
+                    <div class="carousel-item vh-100">
+                        <img src="Images/History.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Read.">
+                        <div class="carousel-caption bg-info bg-opacity-25">
+                            <h5>Discover Past</h5>
+                            <p>Uncover Tales of Antiquity</p>
+                            <button class="btn btn-primary" type="button">History Resources</button>
+                        </div>
+                    </div> <!-- Third carousel-item -->
+
+                    <div class="carousel-item vh-100">
+                        <img src="Images/read 2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Read.">
+                        <div class="carousel-caption bg-info bg-opacity-25">
+                            <h5>Unlock Potential</h5>
+                            <p>Inspire Creativity and Critical Thinking</p>
+                            <button class="btn btn-primary" type="button">Study Resources</button>
+                        </div>
+                    </div> <!-- Fourth carousel-item -->
+               
+                </div> <!-- carousel-body -->
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div> <!-- carousel Container -->
+
+        </main> <!--/carousel  -->
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->        
+        <section class="mb-2 border-bottom border-2"> <!-- Welcome -->
+            <div class="bg-info mb-2 pt-1 px-4  ">
+                <h2>Welcome to Our Library</h2>
+                <p>Our library is a haven for book lovers, knowledge seekers, and community members alike.
+                    With a vast collection of books spanning various genres and subjects, state-of-the-art facilities, and a dedicated team of staff, we strive to create an environment where everyone feels welcome and inspired to explore.
+                    Whether you're here to dive into a gripping novel, conduct research, attend an event, or simply unwind with a good book, we're here to serve you.
+                    Discover all that our library has to offer and embark on a journey of discovery and enrichment.
+                </p>
+                <button class="btn btn-primary mb-2" type="button">Explore Our Library</button>
+            </div>
+        </section> <!-- /Welcome -->
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->        
+        <Section> <!-- Floating Icons -->
+            <div class="d-flex flex-column position-fixed z-3 top-50 end-0 me-2 translate-middle-y">
+                <a class="btn " href="#"  role="button">
+                    <i class="fa-brands fa-square-facebook text-info-emphasis" style="font-size: 50px;"></i>
+                </a>
+                <a class="btn " href="#"  role="button">
+                    <i class="fa-brands fa-square-whatsapp text-info-emphasis" style="font-size: 50px;"></i>
+                </a>
+                <a class="btn " href="#"  role="button">
+                    <i class="fa-brands fa-square-twitter text-info-emphasis" style="font-size: 50px;"></i>
+                </a>
+                <a class="btn " href="#"  role="button">
+                    <i class="fa-brands fa-square-google-plus text-info-emphasis" style="font-size: 50px;"></i>
+                </a>
+                <a class="btn " href="#"  role="button">
+                    <i class="fa-brands fa-square-instagram text-info-emphasis" style="font-size: 50px;"></i>
+                </a>
+            </div>
+        </Section> <!-- /Floating Icons -->
+     
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <section class="mb-2 border-bottom border-2"> <!-- ACCORDION -->
+            <h1 class="badge text-dark bg-info-subtle w-100  p-3 fs-1 ">Discover More</h1>
+            <div class="accordion" id="accordionExample">
+
+                <div class="accordion-item">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Discover New Reads
+                    </button>
+                  </h2>
+
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            "Explore our curated selection of reading recommendations to find your next favorite book.
+                            Whether you're into mystery, romance, science fiction, or non-fiction, we have something for everyone.
+                            Browse our lists organized by genre, theme, or age group, and uncover captivating stories waiting to be explored."
+                        </div>
+                  </div>
+
+                </div> <!-- /1st accordion -->
+
+                <div class="accordion-item">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Exploring Our Heritage
+                    </button>
+                  </h2>
+
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Delve into the rich tapestry of our community's past with our collection of local history resources.
+                            Discover fascinating insights into significant events, landmarks, personalities, and cultural heritage that have shaped our area.
+                            From vintage photographs to historical documents, embark on a journey through time and uncover the stories that define our identity.
+                        </div>
+                  </div>
+
+                </div> <!-- /2nd accordion -->
+
+                <div class="accordion-item mb-2">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Learning Opportunities
+                    </button>
+                  </h2>
+
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Expand your horizons with our diverse range of educational programs and workshops.
+                            Whether you're looking to improve your literacy skills, learn a new language, explore STEM concepts,
+                            or enhance your writing abilities, we offer learning opportunities for patrons of all ages.
+                            Check out our schedule of upcoming programs, and join us in fostering a culture of lifelong learning in our community.
+                        </div>
+                  </div>
+
+                </div> <!-- /3rd accordion -->
+
+              </div> <!-- /accordion Main body-->
+        </section><!-- /ACCORDION  -->
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->        
+        <Section class="mb-2 border-bottom border-2"> <!-- Booking -->
+            <h1 class="badge text-dark bg-info-subtle w-100 p-3 fs-1">Book Your Seat</h1>
+            <p class="ms-3">To reserve your seat in the library, simply select your preferred date and time, and complete the booking process to ensure your spot for uninterrupted study or research</p>
+            <button type="button" id="gfg" class="btn btn-primary mb-2 " data-bs-toggle="tooltip" title="Make Booking !" onclick="showAlert() " onmouseleave="restoreTitle()">Book Here</button>  
+            <textarea class="form-control mb-2" rows="3" placeholder="write your comment"></textarea> 
+        </Section> <!-- /Booking -->
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <Section class="mb-2 border-bottom border-2"> <!-- Featured Books -->
+            <h1 class="badge text-dark bg-info-subtle w-100 p-3 fs-1">Featured Books</h1>
+            <p class="ms-3">Discover our curated selection of popular and new books available at the library.</p>
+            <textarea class="form-control mb-2" rows="3" placeholder="Leave your feedback here"></textarea> 
+            <button type="button" id="gfgf" class="btn btn-primary mb-2" data-bs-toggle="tooltip" title="Submit" onclick="showAlert2() " onmouseleave="restoreTitle2()">Submit</button>              
+        </Section> <!-- Featured Books -->
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <Section class="mb-2 border-bottom border-2"> <!-- Events Calendar -->
+            <h1 class="badge text-dark bg-info-subtle w-100 p-3 fs-1">Events Calendar</h1>
+            <p class="ms-3">Stay informed about upcoming events, workshops, and activities at the library.</p>
+            <textarea class="form-control mb-2" rows="3" placeholder="Let us know if you have any event suggestions"></textarea> 
+            <button type="button" id="gfgf3" class="btn btn-primary mb-2" data-bs-toggle="tooltip" title="Submit Suggestions" onclick="showAlert3() " onmouseleave="restoreTitle3()">Submit</button>              
+        </Section> <!-- /Events Calendar -->
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <Section class="mb-2 border-bottom border-2"> <!-- Online Resources -->
+            <h1 class="badge text-dark bg-info-subtle w-100 p-3 fs-1">Online Resources</h1>
+            <p class="ms-3">Access a variety of digital resources from the convenience of your home.</p>
+            <textarea class="form-control mb-2" rows="3" placeholder="Share your favorite online resources with us!"></textarea> 
+            <button type="button" id="gfgf4" class="btn btn-primary mb-2" data-bs-toggle="tooltip" title="Submit Resources" onclick="showAlert4() " onmouseleave="restoreTitle4()">Submit</button>              
+        </Section> <!-- /Online Resources -->
+
+        <div class="pic pic1"></div> <!-- Background Photo -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!--Photos -->
+        <Section class="mt-1">
+          <h1 class="badge text-dark bg-info-subtle w-100 p-3 fs-1">Featured Content</h1>
+          <div class="container">
+
+                <div class="row gx-5 my-2 mx-5"> <!-- Photos 1st Row -->
+
+                    <div class="col-md-4 px-3 mb-2"> <!--Row.1 Photo.1 -->
+
+                        <div class="Pcards">
+                            
+                            <div Class="pin-cards">
+                                <img src="Images/nature.jpg" alt="Nature" class="px-1 w-100 h-100 object-fit-cover">   
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Explore New Worlds</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info  py-1 mt-3" value="Submit Button">Start Journey</button>
+                                </div>
+                                <p class="text-start">Embark on an epic adventure through the pages of our fantasy and science fiction novels. </p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.1 Photo.1 --> 
+
+
+                    <div class="col-md-4 px-3 mb-2"> <!--Row.1 Photo.2 -->
+
+                        <div class="Pcards">
+
+                            <div class="pin-cards">
+                                <img src="Images/history-2.jpg" alt="History" class="px-1 w-100 h-100 object-fit-cover">   
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Dive into History</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info  py-1 mt-3" value="Submit Button">Begin Odyssey</button>
+                                </div>
+                                <p class="text-start">Journey through time and explore pivotal moments in history with our diverse selection.</p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.1 Photo.2 -->
+
+                    <div class="col-md-4 px-3 mb-2"> <!-- Row.1 Photo.3 -->
+
+                        <div class="Pcards">
+
+                            <div class="pin-cards">
+                                <img src="Images/fairy.jpg" alt="Fairy" class="px-1 w-100 h-100 object-fit-cover">   
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Spark Imagination</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info  py-1 mt-3" value="Submit Button">Imagine Here</button>
+                                </div>
+                                <p class="text-start">Ignite your imagination with enchanting tales of magic and wonder. Delve into the realms of fairy tales, folklore,</p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.1 Photo.3 -->
+
+                </div> <!-- /Photos 1st Row -->
+
+                <div class="row gx-5 my-2 mx-5"> <!-- Photos 2nd Row -->
+
+                    <div class="col-md-4 px-3 mb-2"> <!-- Row.2 Photo.1 -->
+
+                        <div class="Pcards">
+
+                            <div class="pin-cards">
+                                <img src="Images/spy.jpg" alt="spy" class="px-1 w-100 h-100 object-fit-cover">   
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Thrilling Adventures</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info  py-1 mt-3" value="Submit Button">Embark Now</button>
+                                </div>
+                                <p class="text-start">Get your heart racing with pulse-pounding thrillers and gripping suspense novels. </p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.2 Photo.1 -->
+
+
+                    <div class="col-md-4 px-3 mb-2"> <!-- Row.2 Photo.2 -->
+
+                        <div class="Pcards">
+
+                            <div class="pin-cards">
+                                <img src="Images/book chest.jpg" alt="chest" class="px-1 w-100 h-100 object-fit-cover">   
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Discover Gems</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info py-1 mt-3" value="Submit Button">Reveal Riches</button>
+                                </div>
+                                <p class="text-start">Unearth literary gems and hidden treasures from our curated collection of lesser-known works. </p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.2 Photo.2 -->
+
+                    <div class="col-md-4 px-3 mb-2"> <!-- Row.2 Photo.3 -->
+
+                        <div class="Pcards">
+
+                            <div class="pin-cards">
+                                <img src="Images/biography.jpg" alt="biography" class="px-1 w-100 h-100 object-fit-cover">   
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Luminous Lives</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info  py-1 mt-3" value="Submit Button">Discover Lives</button>
+                                </div>
+                                <p class="text-start">Be inspired by the extraordinary lives of trailblazers, visionaries, and changemakers from around the world.</p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.2 Photo.3 -->
+
+                </div> <!-- /Photos 2nd Row -->
+
+                <div class="row gx-5 my-2 mx-5 justify-content-around"> <!-- Photos 3rd Row -->
+
+                    <div class="col-md-4 px-3 mb-2"> <!-- Row.3 Photo.1 -->
+
+                        <div class="Pcards">
+
+                            <div class="pin-cards">
+                                <img src="Images/cusine2.jpg" alt="cusine" class="px-1 w-100 h-100 object-fit-cover">   
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Culinary Delights</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info  py-1 mt-3" value="Submit Button">Explore Recipes</button>
+                                </div>
+                                <p class="text-start">Indulge your taste buds with a journey through gastronomy world. Adventures from Classics to Fusion cuisine.</p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.3 Photo.1 -->
+
+                    <div class="col-md-4 px-3 mb-2"> <!-- Row.3 Photo.2 -->
+
+                        <div class="Pcards">
+
+                            <div class="pin-cards position-relative  ">
+                                <img src="Images/spring.jpg" alt="spring" class="position-absolute w-100 h-100 object-fit-cover">
+                                <Div class="position-absolute w-100 h-100 bg-dark  bg-opacity-10"></Div>
+                                
+                            </div>
+                            <div class="mt-1 mx-1">
+                                <div class="d-flex">
+                                    <h3>Wellness Oasis</h3>
+                                    <button class="ms-auto rounded-pill w-50 z-2 h-25 px-1 btn btn-info  py-1 mt-3" value="Submit Button">Find Serenity</button>
+                                </div>
+                                <p class="text-start">Escape the stresses of daily life and prioritize self-care with our collection of wellness resources.</p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- /Row.3 Photo.2 -->
+            
+                </div> <!-- /Photos 3rd row -->
+
+          </div> <!-- /Photos Container -->
+        </Section>
+
+        <div class=" pic pic2"></div> <!-- Background Photo -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->        
+        <!-- Persona Cards -->
+        <section class="mb-2 border-bottom border-2">
+            <h1 class="badge text-dark bg-info-subtle w-100 p-3 fs-1">Literary Legends</h1>
+  
+            <div class="card-group mx-5 my-3"> <!-- Persona card container -->
+
+                <div class="card mx-2 border text-start shadow-lg bg-body rounded scale-90-hover duration-300 persona "> <!-- Card-1 -->
+                    
+                    <Div class="position-absolute w-100 h-100 bg-dark  bg-opacity-25"></Div>
+                  <img src="Images/Ibn-Battuta.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Ibn-Battuta">
+
+                  <div class="card-body position-absolute w-100 h-100 bg-primary  " style="--bs-bg-opacity: 0.35;" >
+
+                        <div>
+                            <h5 class="text-white mb-1 ">Greatest Muslim Traveler</h5>
+                            <p class="card-text lh-1 fs-xs text-white pb-1 ms-1 mb-4">Exploring Ibn Battuta's Journeys</p>
+                        </div>
+
+                        <div class="h-50 w-25 position-relative">
+                            <Div class="position-absolute w-100 h-100 bg-secondary  bg-opacity-10 rounded-circle"></Div>
+                            <img src="Images/Ibn-Battuta.jpg" class="w-100 h-100 object-fit-cover img-thumbnail rounded-circle" alt="Ibn-Battuta">
+                        </div>
+
+                        <div> 
+                            <h6 class="card-text mb-1"><small class=" text-white"> Ibn Battuta</small></h6>
+                            <p class="card-text lh-1 fs-xs"><small class=" text-white">Embark on a virtual journey with Ibn Battuta as he traverses the Islamic world and beyond, documenting his adventures and encounters.</small></p>
+                        </div>
+
+                  </div> <!-- /Card-1 overlay -->
+
+                </div> <!-- /Card-1 -->
+
+                <div class="card mx-2 border text-start shadow-lg bg-body rounded scale-90-hover duration-300 persona "> <!-- Card-2 -->
+                    
+                    <Div class="position-absolute w-100 h-100 bg-dark  bg-opacity-25"></Div>
+                    <img src="Images/IbnKhaldun.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="IbnKhaldun">
+  
+                  <div class="card-img-overlay bg-primary  " style="--bs-bg-opacity: 0.35;" >
+                        <div>
+                            <h5 class="text-white mb-1">Father of Sociology</h5>
+                            <p class="card-text lh-1 fs-xs text-white pb-1 ms-1 mb-4">Discovering Ibn Khaldun's Wisdom</p>
+                        </div>
+
+                        <div class="h-50 w-25 position-relative">
+                            <Div class="position-absolute w-100 h-100 bg-secondary  bg-opacity-10 rounded-circle"></Div>
+                            <img src="Images/IbnKhaldun.jpg" class="w-100 h-100 object-fit-cover img-thumbnail rounded-circle" alt="IbnKhaldun">
+                        </div>
+
+                        <div> 
+                            <h6 class="card-text mb-1"><small class=" text-white"> Ibn Khaldun</small></h6>
+                            <p class="card-text lh-1 fs-xs"><small class=" text-white">Explore the groundbreaking insights of Ibn Khaldun into society, history, and civilization.</small></p>
+                        </div>
+
+                    </div><!-- /Card-2 overlay -->
+
+                </div> <!-- /Card-2 -->
+
+                <div class="card mx-2 border text-start shadow-lg bg-body rounded scale-90-hover duration-300 persona "> <!-- Card-3 -->
+                    
+                    <img src="Images/ibn-sina2.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="ibn-sina">
+  
+                  <div class="card-img-overlay bg-primary  " style="--bs-bg-opacity: 0.35;" >
+                        <div>
+                            <h5 class="text-white mb-1">Father of Modern Medicine</h5>
+                            <p class="card-text lh-1 fs-xs text-white pb-1 ms-1 mb-4">Exploring Ibn Sina's Legacy</p>
+                        </div>
+
+                        <div class="h-50 w-25 position-relative">
+                            <img src="Images/ibn-sina2.jpg" class="w-100 h-100 object-fit-fill img-thumbnail rounded-circle" alt="ibn-sina">
+                        </div>
+
+                        <div> 
+                            <h6 class="card-text mb-1"><small class=" text-white"> Ibn Sina</small></h6>
+                            <p class="card-text lh-1 fs-xs"><small class=" text-white">Discover the pioneering contributions of Ibn Sina to medicine, philosophy, and science.</small></p>
+                        </div>
+
+                    </div><!-- /Card-3 overlay -->
+
+                </div> <!-- /Card-3 -->
+    
+            </div> <!-- / Persona Cards container-->
+
+        </section> <!-- /Persona Cards -->      
+    
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->  
+    <!-- News -->
+        <section>
+
+            <h2 class="text-center">News</h2>
+            <div class="container my-3"> <!-- News Container -->
+
+                <div class="shadow-lg bg-body rounded position-relative mb-2 news"> <!-- News-1 -->
+                   
+                    <div class=" w-25 h-100 position-absolute soso"> <!-- News-1.Div1 -->
+                        <img src="Images/Read.jpg" class="w-100 h-100 object-fit-cover rounded " alt="">
+                    </div> <!-- /News-1.Div1 -->
+
+                    <div class="ms-auto w-75 bg-white rounded py-2"> <!-- News-1.Div2 -->
+                        <h2>Story Time Adventures!</h2>
+                        <p class="mb-0">Join us this week for Story Time Adventures.</p>
+                        <small class="mb-1"><i class="bi bi-calendar3"></i><span>Sun, May 12th 2024</span></small>
+                        <p class="pe-4 mt-1">Join us for weekly story times designed for different age groups.
+                             Our librarians will bring stories to life with interactive activities.
+                             Perfect for fostering a love of reading and early literacy skills....
+                        </p>
+                        <div>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-chat-square-heart-fill"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-share-fill"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-eyeglasses"></i>
+                                <span>Read</span>
+                            </button>
+                        </div>
+                    </div> <!-- /News-1.Div2 -->
+
+                </div> <!-- /News-1 -->
+
+                <div class="shadow-lg rounded position-relative mb-2 news"> <!-- News-2 -->
+
+                    <div class="bg-white rounded py-2 ps-10 "> <!-- News-2.Div1 -->
+                        <h2>Special Showcase</h2>
+                        <p class="mb-0">Exploring Rare Literary Treasures.</p>
+                        <small class="mb-1"><i class="bi bi-calendar3"></i><span>Tue, MAR 14th 2024</span></small>
+                        <p class="w-75 mt-1">Step into the world of Rare Finds, where history, culture, and creativity converge.
+                            Explore rare manuscripts, artifacts, and artworks that offer unique insights into our shared heritage.
+                             Immerse yourself in a journey of discovery and appreciation....</p>
+                        <div>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-chat-square-heart-fill"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-share-fill"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-eyeglasses"></i>
+                                <span>Read</span>
+                            </button>
+                        </div>
+                    </div> <!-- /News-2.Div1 -->
+
+                    <div class=" h-100 w-25 position-absolute mm ms-auto rounded"> <!-- News-2.Div2 -->
+                        <img class="w-100 h-100 object-fit-cover rounded" src="Images/library 2.jpg" alt="library">
+                    </div> <!-- /News-2.Div2 -->
+
+                </div> <!-- /News-2 -->
+
+                <div class="shadow-lg bg-body rounded position-relative mb-2 news"> <!-- News-3 -->
+                   
+                    <div class=" w-25 h-100 position-absolute soso"> <!-- News-3.Div1 -->
+                        <img src="Images/kid.jpg" class="w-100 h-100 object-fit-cover rounded " alt="kid">
+                    </div> <!-- /News-3.Div1 -->
+
+                    <div class="ms-auto w-75 bg-white rounded py-2"> <!-- News-3.Div2 -->
+                        <h2>Children's Corner</h2>
+                        <p class="mb-0">Exciting Adventures Await Young Readers.</p>
+                        <small class="mb-1"><i class="bi bi-calendar3"></i><span>Thu, Feb 11th 2024</span></small>
+                        <p class="pe-4 mt-1">Ignite a love for reading in your child with our children's corner.
+                             Explore our collection of engaging books, fun activities, and educational resources designed to spark imagination and curiosity...
+                        </p> 
+                        <div>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-chat-square-heart-fill"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-share-fill"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-eyeglasses"></i>
+                                <span>Read</span>
+                            </button>
+                        </div>
+                    </div> <!-- /News-3.Div2 -->
+
+                </div> <!-- /News-3 -->
+
+                <div class="shadow-lg rounded position-relative mb-2 news"> <!-- News-4 -->
+
+                    <div class="bg-white rounded py-2 ps-10 "> <!-- News-4.Div1 -->
+                        <h2>Library Outreach</h2>
+                        <p class="mb-0">Bringing the Library to You.</p>
+                        <small class="mb-1"><i class="bi bi-calendar3"></i><span>Mon, May 14th 2024</span></small>
+                        <p class="w-75 mt-1">Experience the magic of the library beyond our walls with our outreach program.
+                             Through partnerships with schools, community centers, and organizations,
+                              we're expanding access to resources and spreading the joy of reading to all...</p>
+                        <div>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-chat-square-heart-fill"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-share-fill"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="btn btn-secondary p-0 btn-sm rounded-0 px-1">
+                                <i class="bi bi-eyeglasses"></i>
+                                <span>Read</span>
+                            </button>
+                        </div>
+                    </div> <!-- /News-4.Div1 -->
+
+                    <div class=" h-100 w-25 position-absolute mm ms-auto rounded"> <!-- News-4.Div2 -->
+                        <img class="w-100 h-100 object-fit-cover rounded" src="Images/lib3.jpg" alt="Library">
+                    </div> <!-- /News-4.Div2 -->
+
+                </div> <!-- /News-4 -->
+                
+            </div> <!-- /News Container -->
+        </section>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->    
+<!-- Social Media Cards -->
+        <section>  
+            <div class="card-group mx-5">
+
+                <div class="card mx-2 border text-center shadow-lg bg-body rounded"> <!-- Card-1 -->
+                  <div class="card-body">
+                        <h4 class="card-title text-info">Subscribe Now</h4>
+                        <i class="fa-brands fa-square-twitter bg-info  rounded social my-1"></i>
+                        <p class="card-text"><small class="text-body-secondary"><a class="text-info fs-5 text-decoration-none" href="#">Go To Link</a></small></p>
+                  </div>
+                </div> <!-- /Card-1 -->
+
+                <div class="card mx-2 border text-center shadow-lg bg-body rounded"> <!-- Card-2 -->
+                  <div class="card-body">
+                        <h4 class="card-title text-info">Like Page</h4>
+                        <i class="fa-brands fa-square-facebook bg-info  rounded social my-1"></i>
+                        <p class="card-text"><small class="text-body-secondary"><a class="text-info fs-5 text-decoration-none" href="#">Go To Link</a></small></p>
+                 </div>
+                </div> <!-- /Card-2 -->
+
+                <div class="card mx-2 border text-center bg-info shadow-lg bg-body rounded"> <!-- Card-3 -->
+                  <div class="card-body"> 
+                        <h4 class="card-title text-info">Follow</h4>
+                        <i class="fa-brands fa-square-whatsapp bg-info  rounded social my-1"></i>
+                        <p class="card-text"><small class="text-body-secondary"><a class="text-info fs-5 text-decoration-none" href="#">Go To Link</a></small></p>
+                 </div>
+                </div> <!-- /Card-3 -->
+
+                <div class="card mx-2 border text-center shadow-lg bg-body rounded"> <!-- Card-4 -->
+                    <div class="card-body">
+                        <h4 class="card-title text-info">Watch Photos</h4>
+                        <i class="fa-brands fa-square-instagram bg-info rounded social my-1"></i>
+                        <p class="card-text"><small class="text-body-secondary"><a class="text-info fs-5 text-decoration-none" href="#">Go To Link</a></small></p>
+                    </div>
+                </div><!-- /Card-4 -->
+
+            </div> <!-- / Social Cards container-->
+
+        </section> <!-- /Social Media Cards -->
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <footer>
+         
+            <div class="row row-gap-1 bg-info gx-2 mt-2 py-1 text-center ">
+
+                <div class="col-md-4  mb-2 ">
+                    <div class="ms-4">
+                        <div class="d-flex justify-content-center border border-start-0 border-end-0 border-2 py-2">
+                            <div class="footimg">
+                                <img src="Images/library_9501333.png" alt="lib" class="px-1 w-100 h-100 object-fit-cover">
+                            </div>
+                            <h2 class="mt-2">Library History</h2>   
+                        </div>
+                        <div class="mt-1 mx-1">
+                            <p>Established Since 1927</p>
+                            <p>Over than 1,000,547 book</p>
+                            <p>Explore the journey of our library's <a href="#"> growth and evolution</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-2">
+                    <div class="mx-2">
+                        <div class="d-flex justify-content-center border border-start-0 border-end-0 border-2 py-2">
+                            <div class="footimg">
+                                <img src="Images/vecteezy_phone-black-icon-with-call-sign_11338343 (1).png" alt="phone" class="px-1 w-100 h-100 object-fit-cover">
+                            </div>
+                            <h2 class="mt-2">Contact Us</h2>   
+                        </div>
+                        <div class="mt-1">
+                            <p>Telephone : 00088568552</p>
+                            <p><Address>Address: London, United Kingdom</Address></p>
+                            <p>Email : <a href="#">library@co.uk</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-2">
+                    <div class="me-4">
+                        <div class="d-flex justify-content-center border border-start-0 border-end-0 border-2 py-2">
+                            <div class="footimg">
+                                <img src="Images/books_2.png" alt="books" class="px-1 w-100 h-100 object-fit-cover">
+                            </div>
+                            <h2 class="mt-2">Stay Connected</h2>   
+                        </div>
+                        <div class="mt-1">
+                            <p><a href="#">Stay updated</a> on the latest library news, events.</p>
+                            <p><a href="#">Engage </a>with library community!</p>
+                            <p>Subscribe to our<a href="#"> newsletter.</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col px-3 mb-2 ">
+                        <div class="border border-start-0 border-end-0 border-2 py-2">
+                            <h2 class="text-uppercase foot">copyright © 2024 all rights reserved</h2>   
+                        </div>
+                </div>
+
+            </div>
+        </footer>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->        
+        <!-- Modal -->
+        <div class="modal fade" id="Login-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-info">
+                        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Login</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="form-label text-info">Email</p>
+                        <input type="email" class="form-control border-info" placeholder="Enter Your Email">
+                        <span class="form-text ps-2">We will never share your email</span>
+                        <p class="form-label text-info">Password</p>
+                        <input type="password" class="form-control border-info" placeholder="Enter Your Password">
+                        <div class="form-check form-switch mt-2">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Remember me</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Login</button>
+                        <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>  <!-- /Modal -->
+
+        
+        <script src="./js/bootstrap.bundle.js"></script>
+        <script src="./js/script.js"></script>
+
+        
+    </body>
+</html>
